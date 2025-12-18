@@ -2,23 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
-<div class="container">
-    <div id="red"></div>
-    <div id="orange"></div>
-    <div id="green" onclick="change_color_green()"></div>
-
+<div class="score-bord">
+    <div class="team-one">
+        <div id="team-1">Barcelona</div>
+        <span id="score-one">0</span>
+    </div>
+    <div class="team-two">
+        <div id="team-2">Madrid</div>
+        <div id="score-two">0</div>
+    </div>
+    <button onclick="goal()">Doelpunt voor Barcelona</button>
+    <button>Doelpunt voor Madrid</button>
 </div>
 
-<script>
-    function change_color_green(){
-        document.getElementById("green").style.backgroundColor = "green";
-    }
-</script>
 
+<script>
+    let score_team_1 = 0;
+    let score_team_2 = 0;
+
+    function goal() {
+        score_team_1++;
+        document.getElementById("score-one").innerText = score_team_1;
+
+
+    }
+
+</script>
 </body>
 </html>
